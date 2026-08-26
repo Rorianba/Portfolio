@@ -1,9 +1,9 @@
 export default function Certifications() {
   const certs = [
-    { name: 'IBM SPSS Modeler Predictive Analytics (Advanced)', issuer: 'IBM', date: 'Apr 2026', badge: 'Advanced', proof: '/certificates/cert1.jpg' },
-    { name: 'IBM Data Visualization (Cognos Dashboard)', issuer: 'IBM', date: 'Apr 2026', badge: 'Professional', proof: '/certificates/cert2.jpg' },
-    { name: 'Business Intelligence Certification', issuer: 'IBM Skills Network', date: 'Apr 2026', badge: 'Professional', proof: '/certificates/cert3.jpg' },
-    { name: 'IBM Cognos Analytics V11.1.x Reporting Essentials', issuer: 'IBM', date: 'Feb 2026', badge: 'Essentials', proof: '/certificates/cert4.jpg' },
+    { name: 'IBM SPSS Modeler Predictive Analytics (Advanced)', issuer: 'IBM', date: 'Apr 2026', badge: 'Advanced', proof: '/certificates/cert1.pdf' },
+    { name: 'IBM Data Visualization (Cognos Dashboard)', issuer: 'IBM', date: 'Apr 2026', badge: 'Professional', proof: '/certificates/cert2.pdf' },
+    { name: 'Business Intelligence Certification', issuer: 'IBM Skills Network', date: 'Apr 2026', badge: 'Professional', proof: '/certificates/cert3.pdf' },
+    { name: 'IBM Cognos Analytics V11.1.x Reporting Essentials', issuer: 'IBM', date: 'Feb 2026', badge: 'Essentials', proof: '/certificates/cert4.pdf' },
   ]
 
   return (
