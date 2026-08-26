@@ -1,9 +1,9 @@
 export default function Certifications() {
   const certs = [
-    { name: 'IBM SPSS Modeler Predictive Analytics (Advanced)', issuer: 'IBM', date: 'Apr 2026', badge: 'Advanced' },
-    { name: 'IBM Data Visualization (Cognos Dashboard)', issuer: 'IBM', date: 'Apr 2026', badge: 'Professional' },
-    { name: 'Business Intelligence Certification', issuer: 'IBM Skills Network', date: 'Apr 2026', badge: 'Professional' },
-    { name: 'IBM Cognos Analytics V11.1.x Reporting Essentials', issuer: 'IBM', date: 'Feb 2026', badge: 'Essentials' },
+    { name: 'IBM SPSS Modeler Predictive Analytics (Advanced)', issuer: 'IBM', date: 'Apr 2026', badge: 'Advanced', proof: '/certificates/cert1.jpg' },
+    { name: 'IBM Data Visualization (Cognos Dashboard)', issuer: 'IBM', date: 'Apr 2026', badge: 'Professional', proof: '/certificates/cert2.jpg' },
+    { name: 'Business Intelligence Certification', issuer: 'IBM Skills Network', date: 'Apr 2026', badge: 'Professional', proof: '/certificates/cert3.jpg' },
+    { name: 'IBM Cognos Analytics V11.1.x Reporting Essentials', issuer: 'IBM', date: 'Feb 2026', badge: 'Essentials', proof: '/certificates/cert4.jpg' },
   ]
 
   return (
@@ -23,6 +23,11 @@ export default function Certifications() {
               <p className="cert-issuer"><i className="fab fa-ibm"></i> {c.issuer}</p>
               <div className="cert-date"><i className="fas fa-calendar-check"></i> {c.date}</div>
               <div className="cert-badge">{c.badge}</div>
+              {c.proof && (
+                <a href={c.proof} target="_blank" rel="noopener noreferrer" className="btn-view-proof">
+                  View Credential <i className="fas fa-external-link-alt"></i>
+                </a>
+              )}
             </div>
           ))}
         </div>

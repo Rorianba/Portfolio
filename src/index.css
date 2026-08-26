@@ -84,7 +84,7 @@ button {
    UTILITY / LAYOUT
    ============================================ */
 .section-container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -136,7 +136,7 @@ button {
 }
 
 .nav-container {
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 24px;
     display: flex;
@@ -300,7 +300,7 @@ button {
 }
 
 .hero-container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 24px;
     display: grid;
@@ -1183,6 +1183,30 @@ button {
     position: absolute;
     inset: 0;
     background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.4));
+}
+
+.btn-view-proof {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 16px;
+    background: rgba(232, 73, 29, 0.1);
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 24px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-view-proof:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(232, 73, 29, 0.3);
+}
+
+.btn-view-proof i {
+    margin-left: 6px;
 }
 
 .app-overlay {
