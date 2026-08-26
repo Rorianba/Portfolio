@@ -23,9 +23,12 @@ export default function Skills() {
   ]
 
   const skills = [
-    { name: 'MS-EXCEL', value: 95 }, { name: 'POWER BI', value: 90 },
-    { name: 'TABLEAU', value: 85 }, { name: 'GOOGLE SHEETS', value: 90 },
-    { name: 'IBM COGNOS', value: 80 }, { name: 'LOOKER STUDIO', value: 75 },
+    { name: 'MS-EXCEL', value: 95, logo: 'https://cdn.simpleicons.org/microsoftexcel' },
+    { name: 'POWER BI', value: 90, logo: 'https://cdn.simpleicons.org/powerbi' },
+    { name: 'TABLEAU', value: 85, logo: 'https://cdn.simpleicons.org/tableau' },
+    { name: 'GOOGLE SHEETS', value: 90, logo: 'https://cdn.simpleicons.org/googlesheets' },
+    { name: 'IBM COGNOS', value: 80, logo: 'https://cdn.simpleicons.org/ibm' },
+    { name: 'LOOKER STUDIO', value: 75, logo: 'https://cdn.simpleicons.org/looker' },
   ]
 
   return (
@@ -73,7 +76,10 @@ export default function Skills() {
               {skills.map((s, i) => (
                 <div className="progress-item" key={i}>
                   <div className="progress-header">
-                    <span className="progress-label">{s.name}</span>
+                    <span className="progress-label" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <img src={s.logo} alt={s.name} style={{ width: '20px', height: '20px' }} />
+                      {s.name}
+                    </span>
                     <span className="progress-value">{s.value}%</span>
                   </div>
                   <div className="progress-track"><div className="progress-fill" data-width={s.value}></div></div>
