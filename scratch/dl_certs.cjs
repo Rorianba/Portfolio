@@ -1,6 +1,6 @@
 const https = require('https');
 const fs = require('fs');
-const url = 'https://drive.google.com/uc?export=download&id=1j2OhX-yjZnhezKljI7v3M8wRAq9vNU0S';
+const url = 'https://drive.google.com/uc?export=download&id=1Rs9XNuhxVkVIIVrD2VjGQg8tA78bdrSM';
 
 https.get(url, res => {
     const loc = res.headers.location;
