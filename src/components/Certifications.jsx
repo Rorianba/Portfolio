@@ -7,7 +7,7 @@ export default function Certifications() {
     { name: 'IBM Sectoral HR Certificate', issuer: 'IBM Skills Network', date: 'Aug 2026', badge: 'Professional', proof: '/certificates/cert_hr.pdf' },
     { name: 'IBM Sectoral Marketing Certificate', issuer: 'IBM Skills Network', date: 'Aug 2026', badge: 'Professional', proof: '/certificates/cert_mktg.pdf' },
     { name: 'IBM Sectoral Finance Certificate', issuer: 'IBM Skills Network', date: 'Aug 2026', badge: 'Professional', proof: '/certificates/cert_fin.pdf' },
-    { name: 'Skill Scoop Certification', issuer: 'Skill Scoop', date: 'Aug 2026', badge: 'Professional', proof: '/certificates/cert_skillscoop.pdf' },
+    { name: 'IBM Cognos Analytics V11.1.x Reporting Essentials', issuer: 'IBM', date: 'Feb 2026', badge: 'Essentials', proof: '/certificates/cert_cognos.pdf' },
   ]
 
   return (
