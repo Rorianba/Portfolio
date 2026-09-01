@@ -15,7 +15,7 @@ export default function Contact() {
             <div className="contact-list">
               <div className="contact-detail-item"><i className="fas fa-envelope"></i><span>rohan.s2002ingh@gmail.com</span></div>
               <div className="contact-detail-item"><i className="fas fa-phone"></i><span>+91 8271064734</span></div>
-              <div className="contact-detail-item"><i className="fas fa-location-dot"></i><span>Noida, Uttar Pradesh, India</span></div>
+              <div className="contact-detail-item"><i className="fas fa-location-dot"></i><span>Bhagalpur, Bihar, India</span></div>
               <div className="contact-detail-item"><i className="fab fa-linkedin"></i><span>linkedin.com/in/rohankumarsingh01012003</span></div>
             </div>
           </div>

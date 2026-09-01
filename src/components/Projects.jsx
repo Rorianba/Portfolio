@@ -1,8 +1,8 @@
 export default function Projects() {
   const projects = [
-    { num: '01', name: 'British Airways', type: 'Data Science Job Simulation', imgClass: 'project-img-1', icon: 'fa-plane', imgText: 'British Airways', desc: 'Predictive modeling to understand customer buying behaviour and modeling lounge eligibility.', tags: ['Python', 'Machine Learning', 'Data Analysis'] },
-    { num: '02', name: 'Deloitte', type: 'Data Analytics Job Simulation', imgClass: 'project-img-2', deloitte: true, desc: 'Forensic technology and data analytics including data cleaning, EDA, hypothesis testing and data modelling.', tags: ['Excel', 'SQL', 'Data Visualization'], featured: true },
-    { num: '03', name: 'Power BI Project', type: 'Business Intelligence Dashboard', imgClass: 'project-img-3', icon: 'fa-chart-bar', imgText: 'Power BI Dashboard', desc: 'Interactive Power BI dashboard for business insights with KPIs, trends, and data-driven decision support.', tags: ['Power BI', 'DAX', 'Data Modeling'] },
+    { num: '01', name: 'British Airways', type: 'Data Science Job Simulation', imgClass: 'project-img-1', icon: 'fa-plane', imgText: 'British Airways', desc: 'Predictive modeling to understand customer buying behaviour and modeling lounge eligibility.', tags: ['Python', 'Machine Learning', 'Data Analysis'], proof: '/certificates/ba_certificate.pdf' },
+    { num: '02', name: 'Deloitte', type: 'Data Analytics Job Simulation', imgClass: 'project-img-2', deloitte: true, desc: 'Forensic technology and data analytics including data cleaning, EDA, hypothesis testing and data modelling.', tags: ['Excel', 'SQL', 'Data Visualization'], featured: true, proof: '/certificates/deloitte_certificate.pdf' },
+    { num: '03', name: 'Power BI Project', type: 'Business Intelligence Dashboard', imgClass: 'project-img-3', icon: 'fa-chart-bar', imgText: 'Power BI Dashboard', desc: 'Interactive Power BI dashboard for business insights with KPIs, trends, and data-driven decision support.', tags: ['Power BI', 'DAX', 'Data Modeling'], proof: '/certificates/Project.pbix.pbip' },
   ]
 
   return (
@@ -30,6 +30,13 @@ export default function Projects() {
               </div>
               <p className="project-description">{p.desc}</p>
               <div className="project-tags">{p.tags.map((t, j) => <span className="tag" key={j}>{t}</span>)}</div>
+              {p.proof && (
+                <div style={{ marginTop: '20px' }}>
+                  <a href={p.proof} target="_blank" rel="noopener noreferrer" download={p.proof.endsWith('.pbip') ? true : undefined} className="btn-view-proof">
+                    {p.proof.endsWith('.pbip') ? 'Download Project' : 'View Certificate'} <i className={`fas ${p.proof.endsWith('.pbip') ? 'fa-download' : 'fa-external-link-alt'}`}></i>
+                  </a>
+                </div>
+              )}
             </div>
           ))}
         </div>

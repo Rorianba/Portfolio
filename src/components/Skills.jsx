@@ -23,11 +23,11 @@ export default function Skills() {
   ]
 
   const skills = [
-    { name: 'MS-EXCEL', value: 95, logo: 'https://cdn.simpleicons.org/microsoftexcel' },
-    { name: 'POWER BI', value: 90, logo: 'https://cdn.simpleicons.org/powerbi' },
-    { name: 'TABLEAU', value: 85, logo: 'https://cdn.simpleicons.org/tableau' },
+    { name: 'MS-EXCEL', value: 95, logo: '/logos/excel.svg' },
+    { name: 'POWER BI', value: 90, logo: '/logos/powerbi.svg' },
+    { name: 'TABLEAU', value: 85, logo: '/logos/tableau.png' },
     { name: 'GOOGLE SHEETS', value: 90, logo: 'https://cdn.simpleicons.org/googlesheets' },
-    { name: 'IBM COGNOS', value: 80, logo: 'https://cdn.simpleicons.org/ibm' },
+    { name: 'IBM COGNOS', value: 80, logo: '/logos/ibm.svg' },
     { name: 'LOOKER STUDIO', value: 75, logo: 'https://cdn.simpleicons.org/looker' },
   ]
 

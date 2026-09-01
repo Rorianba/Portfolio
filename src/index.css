@@ -2,25 +2,25 @@
    CSS VARIABLES & DESIGN TOKENS
    ============================================ */
 :root {
-    --primary-dark: #0a1628;
-    --primary-navy: #0f2137;
-    --accent: #e8491d;
-    --accent-light: #ff6b35;
-    --accent-gradient: linear-gradient(135deg, #e8491d, #ff6b35);
+    --primary-dark: #0f172a;
+    --primary-navy: #1e293b;
+    --accent: #d55d1d;
+    --accent-light: #ea580c;
+    --accent-gradient: linear-gradient(135deg, #d55d1d, #ea580c);
     --white: #ffffff;
-    --off-white: #f8f9fb;
-    --light-bg: #f0f4f8;
+    --off-white: #f8fafc;
+    --light-bg: #f1f5f9;
     --card-bg: #ffffff;
-    --text-dark: #1a1a2e;
-    --text-body: #4a4a5a;
-    --text-light: #7a7a8a;
-    --text-muted: #b0b0c0;
-    --border-light: #e8ecf1;
-    --shadow-sm: 0 2px 8px rgba(10, 22, 40, 0.06);
-    --shadow-md: 0 4px 20px rgba(10, 22, 40, 0.1);
-    --shadow-lg: 0 8px 40px rgba(10, 22, 40, 0.12);
-    --shadow-xl: 0 16px 60px rgba(10, 22, 40, 0.15);
-    --shadow-accent: 0 4px 20px rgba(232, 73, 29, 0.3);
+    --text-dark: #0f172a;
+    --text-body: #334155;
+    --text-light: #475569;
+    --text-muted: #64748b;
+    --border-light: #e8dfc5;
+    --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+    --shadow-md: 0 4px 20px rgba(15, 23, 42, 0.1);
+    --shadow-lg: 0 8px 40px rgba(15, 23, 42, 0.12);
+    --shadow-xl: 0 16px 60px rgba(15, 23, 42, 0.15);
+    --shadow-accent: 0 4px 20px rgba(213, 93, 29, 0.3);
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
@@ -29,8 +29,8 @@
     --transition-fast: 0.2s ease;
     --transition-base: 0.3s ease;
     --transition-slow: 0.5s ease;
-    --font-primary: 'Poppins', 'Inter', sans-serif;
-    --font-display: 'Playfair Display', serif;
+    --font-primary: 'Plus Jakarta Sans', sans-serif;
+    --font-display: 'Outfit', sans-serif;
     --font-cursive: 'Dancing Script', cursive;
 }
 
@@ -51,7 +51,7 @@ html {
 body {
     font-family: var(--font-primary);
     color: var(--text-body);
-    background: var(--white);
+    background: var(--off-white);
     line-height: 1.7;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -482,54 +482,63 @@ button {
     align-items: center;
 }
 
+@keyframes morphBlob {
+    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+@keyframes floatImg {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes spinRing {
+    100% { transform: rotate(360deg); }
+}
+
 .hero-image-container {
     position: relative;
     width: 380px;
-    height: 460px;
+    height: 380px;
+    animation: floatImg 6s ease-in-out infinite;
 }
 
 .hero-image-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, #d5e4f0 0%, #a8c5da 50%, #7ba7c2 100%);
-    border-radius: 0 0 50% 50% / 0 0 30% 30%;
-    clip-path: ellipse(48% 50% at 50% 50%);
+    background: var(--accent-gradient);
+    animation: morphBlob 8s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: var(--shadow-accent);
 }
 
 .hero-profile-photo {
     position: absolute;
-    inset: 0;
+    inset: 4px;
     z-index: 2;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
     overflow: hidden;
-    clip-path: ellipse(48% 50% at 50% 50%);
+    background: var(--off-white);
+    animation: morphBlob 8s ease-in-out infinite;
 }
 
 .hero-profile-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
-    filter: contrast(1.05) brightness(1.02);
-    transition: transform var(--transition-slow);
-}
-
-.hero-profile-photo:hover img {
     transform: scale(1.03);
 }
 
 .hero-accent-arc {
     position: absolute;
+    top: -20px;
+    left: -20px;
     right: -20px;
-    top: 60px;
-    width: 80px;
-    height: 160px;
-    border: 4px solid var(--accent);
-    border-left: none;
-    border-radius: 0 80px 80px 0;
-    z-index: 1;
+    bottom: -20px;
+    border: 2px dashed var(--accent);
+    border-radius: 50%;
+    z-index: 0;
+    animation: spinRing 25s linear infinite;
 }
 
 .hero-cursive-text {
@@ -692,7 +701,7 @@ button {
 }
 
 .education-card {
-    background: var(--off-white);
+    background: var(--white);
     border-radius: var(--radius-lg);
     padding: 28px 24px;
     border: 1px solid var(--border-light);
@@ -870,7 +879,7 @@ button {
 }
 
 .timeline-content {
-    background: var(--off-white);
+    background: var(--white);
     padding: 24px 28px;
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-light);
@@ -1516,6 +1525,83 @@ button {
     border-radius: 20px;
     background: rgba(232, 73, 29, 0.08);
     color: var(--accent);
+}
+
+/* ============================================
+   AWARDS SECTION
+   ============================================ */
+.awards-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+.award-card {
+    background: var(--off-white);
+    border-radius: var(--radius-lg);
+    padding: 32px 24px;
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.award-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+}
+
+.award-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-full);
+    background: var(--light-bg);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 24px;
+    transition: all var(--transition-base);
+}
+
+.award-card:hover .award-icon-wrapper {
+    background: var(--accent-gradient);
+    color: var(--white);
+}
+
+.award-title {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.award-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.award-desc {
+    font-size: 14px;
+    color: var(--text-body);
+    line-height: 1.6;
 }
 
 /* ============================================
