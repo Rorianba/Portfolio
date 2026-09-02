@@ -1,12 +1,12 @@
 export default function Certifications() {
   const certs = [
+    { name: 'IBM Sectoral HR Certificate', issuer: 'IBM Skills Network', date: 'Aug 2026', badge: 'Professional', proof: '/certificates/cert_hr.pdf' },
+    { name: 'IBM Sectoral Marketing Certificate', issuer: 'IBM Skills Network', date: 'Aug 2026', badge: 'Professional', proof: '/certificates/cert_mktg.pdf' },
+    { name: 'IBM Sectoral Finance Certificate', issuer: 'IBM Skills Network', date: 'Aug 2026', badge: 'Professional', proof: '/certificates/cert_fin.pdf' },
     { name: 'IBM SPSS Modeler Predictive Analytics (Advanced)', issuer: 'IBM', date: 'Apr 2026', badge: 'Advanced', proof: '/certificates/cert1.pdf' },
     { name: 'IBM Data Visualization (Cognos Dashboard)', issuer: 'IBM', date: 'Apr 2026', badge: 'Professional', proof: '/certificates/cert2.pdf' },
     { name: 'Business Intelligence Certification', issuer: 'IBM Skills Network', date: 'Apr 2026', badge: 'Professional', proof: '/certificates/cert3.pdf' },
     { name: 'IBM Big Data Certification', issuer: 'IBM', date: 'Apr 2026', badge: 'Professional', proof: '/certificates/cert4.pdf' },
-    { name: 'IBM Sectoral HR Certificate', issuer: 'IBM Skills Network', date: 'Aug 2026', badge: 'Professional', proof: '/certificates/cert_hr.pdf' },
-    { name: 'IBM Sectoral Marketing Certificate', issuer: 'IBM Skills Network', date: 'Aug 2026', badge: 'Professional', proof: '/certificates/cert_mktg.pdf' },
-    { name: 'IBM Sectoral Finance Certificate', issuer: 'IBM Skills Network', date: 'Aug 2026', badge: 'Professional', proof: '/certificates/cert_fin.pdf' },
     { name: 'IBM Cognos Analytics V11.1.x Reporting Essentials', issuer: 'IBM', date: 'Feb 2026', badge: 'Essentials', proof: '/certificates/cert_cognos.pdf' },
   ]
 
